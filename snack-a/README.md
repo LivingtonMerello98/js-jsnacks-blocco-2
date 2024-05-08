@@ -41,3 +41,5 @@ function contaElementi() {
 
 let elementsNumber = contaElementi();
 console.log(elementsNumber);
+
+//possiamo aggiungere un controllo numerico?

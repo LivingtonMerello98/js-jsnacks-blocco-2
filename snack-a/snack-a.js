@@ -2,15 +2,24 @@
 
 console.log("sono connesso");
 
-
-function contaElementi(){
+function contaElementi() {
 
     //valore richiesto all'utente
-    const  userInput = prompt("digita un valore per inserirlo nell'array");
-    console.log(userInput);
+    let userInput = prompt("Inserisci un dato:");
 
-    // inizializiamo variabile vuota
+    // inizializiamo una variabile in let vuota
     let myArray = [];
-    console.log(myArray);
 
+    // finchè non premi nulla i dati veranno inseriti nell array
+    while (userInput !== null) {
+        // Aggiungiamo l'elemento all'array
+        myArray.push(Number(userInput));  
+        userInput = prompt("Continua a inserire elementi o premi 'Annulla' per terminare");
+    }
+    //estraiamo la lunghezza dell array
+    return myArray.length;
 }
+
+//salviamo la funzione all'interno di una variabile e debuggiamo
+let elementsNumber = contaElementi();
+console.log(elementsNumber);
