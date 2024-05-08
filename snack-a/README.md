@@ -22,3 +22,22 @@ scrivere una funzione contaElementi() che, dato un array in input, restituisca i
     let elementsNumber = contaElementi()
     console.log(elementsNumber);
 
+
+function contaElementi() {
+    let userInput = prompt("Inserisci un dato:");
+
+    // Array dove saranno inseriti gli elementi
+    let myArray = [];
+
+    // I dati verranno inseriti nel prompt finché non premi annulla
+    while (userInput !== null) {
+        // Aggiungiamo l'elemento all'array
+        myArray.push(Number(userInput));  
+        userInput = prompt("Continua a inserire elementi o premi 'Annulla' per terminare");
+    }
+
+    return myArray.length;
+}
+
+let elementsNumber = contaElementi();
+console.log(elementsNumber);
